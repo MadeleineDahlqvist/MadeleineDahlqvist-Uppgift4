@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <%- include('./partials/head') %>
+  <script src="/signup.js" type="module" defer></script>
+
+  <body class="bg-body">
+    <main class="grid-20-1fr min-h-full w-full bg-primary absolute">
+      <%- include('./partials/sidebar', { active: '/signup' }) %>
+      <section class="flex flex-col justify-center items-center">
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <form id="form" class="space-y-4 md:space-y-6" action="#">
+            <h2 class="text-black text-4xl">Skapa konto</h2>
+            <div>
+              <label class="text-black grid gap-1" for="firstname"
+                >Förnamn:</label
+              >
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                id="firstname"
+                name="firstname"
+                class="rounded"
+                required=""
+              />
+            </div>
+            <div>
+              <label class="text-black grid gap-1" for="surname"
+                >Efternamn:</label
+              >
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                id="surname"
+                name="surname"
+                class="rounded"
+                required=""
+              />
+            </div>
+            <div>
+              <label class="text-black grid gap-1" for="username"
+                >Användarnamn:</label
+              >
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                name="username"
+                id="username"
+                class="rounded"
+                required=""
+              />
+            </div>
+            <div>
+              <label class="text-black grid gap-1" for="email"
+                >E-postadress:</label
+              >
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                name="email"
+                id="email"
+                class="rounded"
+                required=""
+              />
+            </div>
+            <div>
+              <label class="text-black grid gap-1" for="password"
+                >Lösenord:</label
+              >
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                id="password"
+                name="password"
+                class="rounded"
+                required=""
+              />
+            </div>
+            <div class="text-sm italic" id="passwordIndicator">
+              <p></p>
+            </div>
+            <div>
+              <button
+                id="button"
+                class="bg-secondary hover:bg-slate-500 text-white font-bold py-2 px-4 rounded"
+                type="button"
+              >
+                Skapa konto
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
